@@ -95,8 +95,8 @@ class EBSBenchmark(StorageBenchmark):
 def main():
     local_file = 'submission.csv'
     s3_benchmark = S3Benchmark(local_file, 'hasan-donghun', 'submission.csv')
-    efs_benchmark = EFSBenchmark(local_file, '/mnt/efs/submission.csv')
-    ebs_benchmark = EBSBenchmark(local_file, '/mnt/ebs/submission.csv')
+    efs_benchmark = EFSBenchmark(local_file, '../submission.csv')
+    ebs_benchmark = EBSBenchmark(local_file, '../submission.csv')
 
     print("Starting S3 Benchmark...")
     s3_benchmark.run_benchmark()
